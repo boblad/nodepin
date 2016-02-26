@@ -1,9 +1,10 @@
 var express = require('express');
-var pin16 = require('pi-pin').connect(16);
+var piPins = require('pi-pins');
+var pin17 = piPins.connect(17);
 
 var app = express();
 
-pin16.mode('low');
+
 app.get('/on', function(req, res){
   pin16.mode('high');
   res.send('in on');
