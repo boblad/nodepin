@@ -14,11 +14,12 @@ var app = express();
 
 var getPin = function(pinId) {
   pinId = parseInt(pinId);
-  // if (pinId === 2) {
-  //   return theaterPin;
-  // } else if (pinId === 3) {
-  //   return pingPongPin;
-  // } else if (pinId === 4) {
+  if (pinId === 2) {
+    return theaterPin;
+  } else if (pinId === 3) {
+    return pingPongPin;
+  } 
+  //else if (pinId === 4) {
   //   return underStairsPin;
   // } else if (pinId === 22) {
   //   return foodPin;
@@ -33,7 +34,6 @@ var getPin = function(pinId) {
   // } else if (pinId === 3) {
   //   return outsidePin;
   // }
-  return theaterPin;
 }
 
 app.get('/basement/:pin/on', function(req, res){
