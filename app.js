@@ -37,14 +37,14 @@ var getPin = function(pinId) {
 }
 
 app.get('/basement/:pin/on', function(req, res){
-  console.log('pin', req.params.pin);
+  console.log('pin on', req.params.pin);
   var currentPin = getPin(req.params.pin);
   currentPin.mode('high');
   res.send('light on');
 });
 
 app.get('/basement/:pin/off', function(req, res){
-  console.log('pin', req.params.pin);
+  console.log('pin off', req.params.pin);
   var currentPin = getPin(req.params.pin);
   currentPin.mode('low');
   res.send('light off');
