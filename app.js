@@ -8,7 +8,7 @@ var gymPin = piPins.connect(14);
 var bathPin = piPins.connect(15);
 var kitchenPin = piPins.connect(18);
 var playAreaPin = piPins.connect(17);
-var outsidePin = piPins.connect(27);
+//var outsidePin = piPins.connect(27);
 
 var app = express();
 
@@ -30,9 +30,10 @@ var getPin = function(pinId) {
     return kitchenPin;
   } else if (pinId === 17) {
     return playAreaPin;
-  } else if (pinId === 3) {
-    return outsidePin;
   }
+  //else if (pinId === 3) {
+  //   return outsidePin;
+  // }
 }
 
 app.get('/basement/:pin/on', function(req, res){
