@@ -1,7 +1,7 @@
 var express = require('express');
 var piPins = require('pi-pins');
 var theaterPin = piPins.connect(2);
-// var pingPongPin = piPins.connect(3);
+var pingPongPin = piPins.connect(3);
 // var underStairsPin = piPins.connect(4);
 // var foodPin = piPins.connect(22);
 // var gymPin = piPins.connect(14);
