@@ -6,7 +6,7 @@ var underStairsPin = piPins.connect(4);
 var foodPin = piPins.connect(22);
 var gymPin = piPins.connect(14);
 var bathPin = piPins.connect(15);
-// var kitchenPin = piPins.connect(18);
+var kitchenPin = piPins.connect(18);
 // var playAreaPin = piPins.connect(17);
 // var outsidePin = piPins.connect(27);
 
@@ -26,10 +26,10 @@ var getPin = function(pinId) {
     return gymPin;
   } else if (pinId === 15) {
     return bathPin;
+  } else if (pinId === 18) {
+    return kitchenPin;
   }
-  // else if (pinId === 18) {
-  //   return kitchenPin;
-  // } else if (pinId === 17) {
+  //else if (pinId === 17) {
   //   return playAreaPin;
   // } else if (pinId === 3) {
   //   return outsidePin;
