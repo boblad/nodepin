@@ -1,38 +1,39 @@
 var express = require('express');
 var piPins = require('pi-pins');
 var theaterPin = piPins.connect(2);
-var pingPongPin = piPins.connect(3);
-var underStairsPin = piPins.connect(4);
-var foodPin = piPins.connect(22);
-var gymPin = piPins.connect(14);
-var bathPin = piPins.connect(15);
-var kitchenPin = piPins.connect(18);
-var playAreaPin = piPins.connect(17);
-var outsidePin = piPins.connect(27);
+// var pingPongPin = piPins.connect(3);
+// var underStairsPin = piPins.connect(4);
+// var foodPin = piPins.connect(22);
+// var gymPin = piPins.connect(14);
+// var bathPin = piPins.connect(15);
+// var kitchenPin = piPins.connect(18);
+// var playAreaPin = piPins.connect(17);
+// var outsidePin = piPins.connect(27);
 
 var app = express();
 
 var getPin = function(pinId) {
   pinId = parseInt(pinId);
-  if (pinId === 2) {
-    return theaterPin;
-  } else if (pinId === 3) {
-    return pingPongPin;
-  } else if (pinId === 4) {
-    return underStairsPin;
-  } else if (pinId === 22) {
-    return foodPin;
-  } else if (pinId === 14) {
-    return gymPin;
-  } else if (pinId === 15) {
-    return bathPin;
-  } else if (pinId === 18) {
-    return kitchenPin;
-  } else if (pinId === 17) {
-    return playAreaPin;
-  } else if (pinId === 3) {
-    return outsidePin;
-  }
+  // if (pinId === 2) {
+  //   return theaterPin;
+  // } else if (pinId === 3) {
+  //   return pingPongPin;
+  // } else if (pinId === 4) {
+  //   return underStairsPin;
+  // } else if (pinId === 22) {
+  //   return foodPin;
+  // } else if (pinId === 14) {
+  //   return gymPin;
+  // } else if (pinId === 15) {
+  //   return bathPin;
+  // } else if (pinId === 18) {
+  //   return kitchenPin;
+  // } else if (pinId === 17) {
+  //   return playAreaPin;
+  // } else if (pinId === 3) {
+  //   return outsidePin;
+  // }
+  return theaterPin;
 }
 
 app.get('/basement/:pin/on', function(req, res){
