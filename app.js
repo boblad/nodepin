@@ -2,7 +2,7 @@ var express = require('express');
 var piPins = require('pi-pins');
 var theaterPin = piPins.connect(2);
 var pingPongPin = piPins.connect(3);
-// var underStairsPin = piPins.connect(4);
+var underStairsPin = piPins.connect(4);
 // var foodPin = piPins.connect(22);
 // var gymPin = piPins.connect(14);
 // var bathPin = piPins.connect(15);
@@ -18,10 +18,10 @@ var getPin = function(pinId) {
     return theaterPin;
   } else if (pinId === 3) {
     return pingPongPin;
-  } 
-  //else if (pinId === 4) {
-  //   return underStairsPin;
-  // } else if (pinId === 22) {
+  } else if (pinId === 4) {
+    return underStairsPin;
+  }
+  //else if (pinId === 22) {
   //   return foodPin;
   // } else if (pinId === 14) {
   //   return gymPin;
